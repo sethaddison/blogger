@@ -1,0 +1,13 @@
+<div class="col-sm-4">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title text-dark">
+        <%= article.title %>
+      </h5>
+      <p class="card-text text-muted">
+        <%= article.body.truncate(25) %>
+      </p>
+      <%= link_to 'Read More', article_path(article), class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>

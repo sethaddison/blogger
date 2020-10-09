@@ -1,0 +1,19 @@
+<div class="row mb-3">
+  <div class="col">
+    <h1><%= @article.title %></h1>
+  </div>
+  <div class="col text-right">
+
+    <%= link_to edit_article_path, class: "text-secondary text-decoration-none ml-2" do %>
+      <i class="far fa-edit fa-lg"></i>
+    <% end %>
+
+    <%= link_to article_path,
+          method: :delete,
+          data: { confirm: "Are you sure?"},
+          class: "text-secondary text-decoration-none ml-2" do %>
+            <i class="far fa-trash-alt fa-lg"></i>
+    <% end %>
+  </div>
+</div>
+<p class="text-muted"><%= @article.body %></p>
