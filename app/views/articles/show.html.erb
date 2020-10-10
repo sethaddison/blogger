@@ -1,6 +1,9 @@
 <div class="row mb-3">
   <div class="col">
     <h1><%= @article.title %></h1>
+      <% @article.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag), class: "badge badge-dark" %>
+      <% end %>
   </div>
   <div class="col text-right">
 

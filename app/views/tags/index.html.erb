@@ -1,0 +1,10 @@
+<h1>Tags</h1>
+
+<div class="list-group mt-4">
+  <% @tags.each do |tag| %>
+    <%= link_to tag_path(tag), class: "list-group-item list-group-item-action text-dark text-decoration-none" do %>
+      <%= tag.name.capitalize %> <span class="badge badge-dark float-right"><%= tag.articles.count %></span>
+    <% end %>
+  <% end %>
+  </div>
+</div>
