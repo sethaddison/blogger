@@ -1,0 +1,11 @@
+
+<div class="list-group-item">
+  <strong><%= comment.author %></strong>
+  <span class="text-muted"><%= comment.body %></span>
+  <%= link_to article_comment_path(comment.article, comment),
+        method: :delete,
+        data: { confirm: "Are you sure?"},
+        class: "text-secondary text-decoration-none ml-2" do %>
+          <i class="far fa-trash-alt float-right"></i>
+  <% end %>
+</div>
