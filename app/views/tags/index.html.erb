@@ -3,7 +3,10 @@
 <div class="list-group mt-4">
   <% @tags.each do |tag| %>
     <%= link_to tag_path(tag), class: "list-group-item list-group-item-action text-dark text-decoration-none" do %>
-      <%= tag.name.capitalize %> <span class="badge badge-dark float-right"><%= tag.articles.count %></span>
+      <%= tag.name.titleize %>
+      <span class="text-muted small float-right">
+        <%= pluralize(tag.articles.count, "article") %>
+      </span>
     <% end %>
   <% end %>
   </div>

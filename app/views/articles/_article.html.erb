@@ -2,10 +2,10 @@
   <div class="card mb-3">
     <div class="card-body">
       <h5 class="card-title text-dark">
-        <%= article.title %>
+        <%= article.title.titleize %>
       </h5>
       <p class="card-text text-muted">
-        <%= article.body.truncate(25) %>
+        <%= article.body.truncate(110) %>
       </p>
       <%= link_to 'Read More', article_path(article), class: "btn btn-outline-secondary" %>
     </div>
